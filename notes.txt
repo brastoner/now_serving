@@ -8,4 +8,3 @@ sqlite3 bar.db < doit.sql
 
 http://codyaray.com/2013/11/dependency-injection-in-sinatra
 https://www.oreilly.com/library/view/sinatra-up-and/9781449306847/ch04.html
-
