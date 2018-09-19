@@ -3,7 +3,6 @@ nowserving.online
 takeanumber.online
 
 
-
 sqlite3 bar.db < doit.sql
 
 
