@@ -1,6 +1,7 @@
 nowservingme.com
 nowserving.online
 takeanumber.online
+takenum.com
 
 
 sqlite3 bar.db < doit.sql

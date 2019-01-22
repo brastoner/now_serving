@@ -33,4 +33,15 @@ class LineManQueueManager
 
 		q
 	end
+
+	def create_next_queue_element(queue_id, owner)
+
+		last_pos = @db[:queue_element].max(:pos)
+		new_pos = last_pos + 1
+
+		puts new_pos
+
+		@db[:queue_element].insert(queue_id: queue_id, owner: owner, pos: new_pos)
+
+	end
 end
