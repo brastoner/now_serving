@@ -1,0 +1,13 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE queue(id TEXT PRIMARY KEY, curr_pos INTEGER, owner TEXT);
+INSERT INTO "queue" VALUES('foo', 0, 'foo');
+INSERT INTO "queue" VALUES('bar', 0, 'bar');
+CREATE TABLE queue_element(id TEXT, queue_id TEXT, pos INTEGER, owner TEXT, used_ts INTEGER);
+INSERT INTO "queue_element" VALUES('qe1','foo',1,'owner1',NULL);
+INSERT INTO "queue_element" VALUES('qe2','bar',1,'owner2',NULL);
+INSERT INTO "queue_element" VALUES('qe3','foo',2,'owner3',NULL);
+INSERT INTO "queue_element" VALUES('qe4','bar',2,'owner4',NULL);
+INSERT INTO "queue_element" VALUES('qe5','foo',3,'owner5',NULL);
+INSERT INTO "queue_element" VALUES('qe6','bar',3,'owner6',NULL);
+COMMIT;

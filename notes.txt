@@ -9,8 +9,16 @@ sqlite3 bar.db < doit.sql
 
 http://codyaray.com/2013/11/dependency-injection-in-sinatra
 https://www.oreilly.com/library/view/sinatra-up-and/9781449306847/ch04.html
+https://stackoverflow.com/questions/6496433/multiple-sinatra-apps-using-rack-mount
 
+Run One Test
+jruby line_man_test.rb -n test_create_queue
 
+Run WebApp
+
+From webapp dir: rackup -p 4567
+
+-----------------
 
 Git Stuff
 
@@ -23,3 +31,10 @@ Put this in .git/config
 	name = brastoner
 	email = the.brady.stone@gmail.com
 	
+
+-----------------
+
+- A ticket is a JWT which contains queue id and position, but does not contain any user info.
+- There could be a ticket locker where a user is able to save the ticket using only a password.  But using the ticket locker for redemption is optional.  All they need is the ticket.
+- Anybody can redeem a ticket if they have it
+
